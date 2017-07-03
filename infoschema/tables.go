@@ -830,7 +830,7 @@ func dataForTableConstraints(schemas []*model.DBInfo) [][]types.Datum {
 					cname = idx.Name.O
 					ctype = uniqueKeyType
 				} else {
-					// The index has no constriant.
+					// The index has no constraint.
 					continue
 				}
 				record := types.MakeDatums(
