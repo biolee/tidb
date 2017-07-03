@@ -531,7 +531,7 @@ func dataForCharacterSets() (records [][]types.Datum) {
 	return records
 }
 
-func dataForColltions() (records [][]types.Datum) {
+func dataForCollections() (records [][]types.Datum) {
 	records = append(records,
 		types.MakeDatums("ascii_general_ci", "ascii", 1, "Yes", "Yes", 1),
 		types.MakeDatums("binary", "binary", 2, "Yes", "Yes", 1),
@@ -1026,7 +1026,7 @@ func (it *infoschemaTable) getRows(ctx context.Context, cols []*table.Column) (f
 	case tableCharacterSets:
 		fullRows = dataForCharacterSets()
 	case tableCollations:
-		fullRows = dataForColltions()
+		fullRows = dataForCollections()
 	case tableSessionVar:
 		fullRows, err = dataForSessionVar(ctx)
 	case tableConstraints:
