@@ -28,7 +28,7 @@ type Compiler struct {
 
 // Compile compiles an ast.StmtNode to an ast.Statement.
 // After preprocessed and validated, it will be optimized to a plan,
-// then wrappped to an adapter *statement as stmt.Statement.
+// then wrapped to an adapter *statement as stmt.Statement.
 func (c *Compiler) Compile(ctx context.Context, node ast.StmtNode) (ast.Statement, error) {
 	is := GetInfoSchema(ctx)
 	if err := plan.Preprocess(node, is, ctx); err != nil {
